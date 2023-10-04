@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://kchlqqqmtopg"]
+
+[ext_resource type="Script" path="res://camera.gd" id="1_614be"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_n40sn"]
+height = 1.7
+
+[node name="Camera" type="CharacterBody3D"]
+script = ExtResource("1_614be")
+
+[node name="MainCamera" type="Camera3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_n40sn")
